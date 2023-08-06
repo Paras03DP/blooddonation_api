@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-const rooms = require('../data/room')
+const bloods = require('../data/bloods')
 
 
-const roomsSchema = mongoose.Schema({
+const bloodsSchema = mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -15,8 +15,8 @@ const roomsSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    price: {
-        type: Number,
+    type: {
+        type: String,
         required: true
     },
     phoneNumber: {
@@ -32,7 +32,7 @@ const roomsSchema = mongoose.Schema({
 }, {
     timestamps: true
 });
-roomsSchema.set('toJSON', {
+bloodsSchema.set('toJSON', {
     transform: (document, returnDocument) => {
         returnDocument.id = document._id.toString(),
             delete returnDocument._id;
@@ -41,4 +41,4 @@ roomsSchema.set('toJSON', {
     }
 });
 
-module.exports = mongoose.model('Rooms', roomsSchema)
+module.exports = mongoose.model('Bloods', bloodsSchema)

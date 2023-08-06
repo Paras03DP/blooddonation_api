@@ -1,14 +1,14 @@
 require('dotenv').config();
 const express = require('express');
 const user_routes = require('./routes/user_routes');
-const roomFinder_routes = require('./routes/room_finder_routes');
+const bloodDonation_routes = require('./routes/blood_donation_routes');
 const upload = require('./middleware/upload');
 
 
 const { verifyUser } = require('./middleware/auth');
 
 const mongoose = require('mongoose');
-const dbName = '/roomFinder'
+const dbName = '/goFundLife'
 
 
 const app = express();
@@ -26,7 +26,7 @@ mongoose.connect('mongodb://127.0.0.1:27017' + dbName)
     .catch((err) => console.log(err))
 
 app.use('/users', user_routes);
-app.use('/rooms', verifyUser, roomFinder_routes);
+app.use('/bloods', verifyUser, bloodDonation_routes);
 // app.post('/uploads', upload.single('images'), (req, res) => {
 //     res.json(req.file);
 // })

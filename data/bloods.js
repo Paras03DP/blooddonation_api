@@ -1,4 +1,4 @@
-const rooms = [
+const bloodss = [
     {
         id: 1,
         tilt: "3 rooms",

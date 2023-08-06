@@ -5,13 +5,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-
-    // contactNumber: {
-    //     type: String,
-    //     required: true,
-    //     unique: true
-
-    // },
     email: {
         type: String,
         unique: true,
@@ -21,11 +14,6 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    // image: {
-    //     type: String,
-    //     default: null,
-
-    // },
 
     role: {
         type: String,
