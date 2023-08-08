@@ -17,13 +17,13 @@ const {
 const { verifyUser } = require('../middleware/auth');
 const router = express.Router();
 
-router.get('/getAllBloods', verifyUser, getAllBLoods);
+router.get('/getAllBloods', verifyUser, getAllBloods);
 router.post('/addBloods', verifyUser, createABlood);
 router.put((req, res, next) => {
     res.status(405).json({ error: "Put request is not allowed" });
 });
 router.post("/uploadImage/:postId", upload, uploadImage);
-router.get('/getMyBloods',verifyUser, getAllMyBloods);
+router.get('/getMyBloods',verifyUser, getAllMyBlood);
 
 
 

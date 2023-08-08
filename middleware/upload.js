@@ -23,6 +23,6 @@ const upload = multer({
     storage: storage,
     fileFilter: imageFileFilter,
     limits: { fileSize: maxSize },
-}).single("RoomImages");
+}).single("BloodImages");
 
 module.exports = upload;

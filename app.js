@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    return res.send('<h1>Hello MY Friends</h1>');
+    return res.send('<h1>Go Fund Life</h1>');
 });
 
 mongoose.connect('mongodb://127.0.0.1:27017' + dbName)
